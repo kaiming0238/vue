@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+    <style>
+    body{
+        background-image: url();
+    }
+    </style>
+</head>
+
+<body>
+    <form action="./userbase.txt">
+        用户名:<br>
+        <input type="text" name="userid">
+        <br>
+        密码:<br>
+        <input type="password" name="psw">
+        <br>
+        邮箱：<br>
+        <input type="email" name="邮箱">
+        <br>
+        真实 姓名:<br>
+        <input type="text" name="firstname" value="例：张三">
+
+        <br><br>
+
+        性别：<br>
+
+        <input type="radio" name="sex" value="男" checked>男
+        <br>
+        <input type="radio" name="sex" value="女">女
+        <br>
+            身份证号：<br>
+            <input type="password" name="identity">
+
+
+
+
+        <br><br>
+        兴趣爱好：
+        <input type="checkbox" name="唱歌">唱歌
+        <input type="checkbox" name="跳舞">跳舞
+        <input type="checkbox" name="打篮球">打篮球
+        <input type="checkbox" name="玩游戏">电脑游戏
+        <input type="checkbox" name="游泳">游泳
+        <input type="checkbox" name="其他">其他
+
+        <br>
+        喜欢的颜色：
+        <input type="color" name="颜色">
+        <br><br>
+        上传头像：
+        <input type="file" name="照片">
+
+        <p>
+            自我介绍：<br>
+            <textarea name="" id="" cols="60" rows="30">
+    自我介绍：
+</textarea>
+            <br>
+
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+
+            <p>
+                提交数据将上传到"./userbase.txt">
+
+            </p>
+    </form>
+
+
+</body>
+
+</html>

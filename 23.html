@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-系列</title>
+    <script src="./vue.js"></script>
+</head>
+<style>
+    .odiv1 {
+        width: 80px;
+        height: 80px;
+        background: #aaa;
+        margin: 5px;
+    }
+
+    .odiv2 {
+        width: 50px;
+        height: 50px;
+        background: #ccc;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <div class="odiv1" v-on:click.self="Doparent">a
+            <div class="odiv2" v-on:click="Dothis">b</div>
+
+        </div>
+        <div class="odiv1" v-on:click="Doparent">c
+            <div class="odiv2" v-on:click.self="Dothis">d</div>
+
+        </div>
+    </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                methods: {
+                    Doparent() { console.log('我是父元素的单击事件') },
+                    Dothis() { console.log('我是当前元素的单击事件') }
+
+                }
+
+
+            })
+
+
+
+        </script>
+
+
+
+
+</body>
+
+</html>

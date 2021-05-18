@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>use</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id ="app" v-my-directive>
+
+
+    </div>
+    <script>
+    let Myplugin ={}
+     Myplugin.install=function(Vue,options){
+         console.log(options)
+         Vue.directive('my-directive',{
+
+             bind(el,binding){el.style='width:100px;height:100px;background-color:#ccc'}
+         })
+     }
+Vue.use(Myplugin,{someOption:true})    
+    var vm=new Vue({
+
+        el:'#app'
+    })
+    
+    </script>
+
+
+
+
+
+</body>
+</html>
