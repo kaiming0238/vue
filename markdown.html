@@ -15,7 +15,7 @@
             height: 1000px;
             ;
             background: url(./1.jpg)no-repeat center;
-            
+
             background-size: 50%;
         }
 
@@ -56,6 +56,47 @@
             left: 80%;
             bottom: 50%;
 
+
+        }
+
+        input {
+
+            background: hsl(199, 50%, 85%);
+            height: 50px;
+            width: 150px;
+            border-radius: 20% 10% 20% 10% / 80% 10% 80% 10%;
+            border: 1px solid #58a;
+            box-shadow:
+                /*底部灰色阴影*/
+                2px 4px 2px 5px rgba(0, 0, 0, 0.2),
+                /*下面深蓝色立体阴影*/
+                2px 4px 1px 1px hsl(208, 50%, 55%),
+                /*内部暗色阴影*/
+                0 -15px 2px 2px rgba(0, 0, 0, 0.10) inset;
+            color: hsl(208, 50%, 40%);
+            text-shadow: rgba(255, 255, 255, .5) 0 1px 0;
+            font: 24px/1em 'Droid Sans', sans-serif;
+            font-weight: bold;
+
+            margin: 0 0 0 10px;
+        }
+
+        input:hover {
+            border: 1px solid black;
+            text-shadow: 0px 1px 0 #333333;
+            background: #00b0dc;
+            color: white
+        }
+
+        input:active {
+
+            margin-top: 20px;
+            border: 1px solid #253737;
+            text-shadow: 0 -1px 0 #333333;
+            background: #00b0dc;
+            color: white;
+
+
         }
     </style>
 </head>
@@ -84,13 +125,16 @@
                     <p>要是你觉得孤独，没关系，我们一起</p>
                 </i></em>
             <img src="./2.gif">
+            <p><a href="https://haokan.baidu.com/v?vid=12539849886231475896&pd=bjh&fr=bjhauthor&type=video"><input
+                        type="button" value="请单击"></a>
+            </p>
         </div>
-    </div>
-    <script>
-        var vm = new Vue({
-            el: '#flex-container',
-        })
-    </script>
+
+        <script>
+            var vm = new Vue({
+                el: '#flex-container',
+            })
+        </script>
 </body>
 
 </html>
